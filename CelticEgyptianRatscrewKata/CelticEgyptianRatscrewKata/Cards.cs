@@ -18,6 +18,14 @@ namespace CelticEgyptianRatscrewKata
             m_Cards.Add(card);
         }
 
+        public void AddToTop(Cards cards)
+        {
+            foreach (var card in cards)
+            {
+                m_Cards.Add(card);                
+            }
+        }
+
         public Card Pop()
         {
             var first = m_Cards.First();
@@ -76,6 +84,24 @@ namespace CelticEgyptianRatscrewKata
             }
 
             return output;
+        }
+
+        protected bool Equals(Cards other)
+        {
+            return Equals(ToString(), other.ToString());
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Cards) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
         }
     }
 }
