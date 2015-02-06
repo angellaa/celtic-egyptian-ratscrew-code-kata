@@ -60,6 +60,9 @@
     <Compile Include="Tests\DarkQueenSnapRuleTests.cs" />
     <Compile Include="SnapRules\SandwichSnapRule.cs" />
     <Compile Include="Tests\DealerTests.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Tests\GameTests.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Tests\SandwichSnapRuleTests.cs" />
     <Compile Include="Tests\ShufflerTests.cs" />
     <Compile Include="Tests\SnapValidatorTests.cs" />
